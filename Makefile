@@ -14,15 +14,3 @@ setup-env:
 
 train:
 	dvc repro train
-
-# TODO: Update this
-#serve:
-#	FLASK_ENV=development FLASK_APP=serving/src/main.py python -m flask run
-
-# TODO: Update this
-#test-service:
-#	PYTHONPATH=. python serving/tests/test_service.py
-
-# TODO: Update this
-#ping-heroku-service:
-#	curl --header "Content-Type: application/json" --request POST --data '{"text":"science and technology news"}' $(shell heroku info -s | grep web_url | cut -d= -f2)/predict
