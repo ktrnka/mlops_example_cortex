@@ -1,0 +1,6 @@
+- name: topic-classifier
+  kind: RealtimeAPI
+  predictor:
+    type: python
+    python_path: src/
+    path: src/main.py

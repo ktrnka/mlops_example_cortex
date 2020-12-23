@@ -1,0 +1,56 @@
+# cluster.yaml
+
+# EKS cluster name
+cluster_name: cortex-mlops-example
+
+# AWS region
+region: us-west-2
+
+## list of availability zones for your region
+#availability_zones:  # default: 3 random availability zones in your region, e.g. [us-east-1a, us-east-1b, us-east-1c]
+
+# instance type
+instance_type: t3.medium
+
+# minimum number of instances
+min_instances: 1
+
+# maximum number of instances
+max_instances: 5
+
+# disk storage size per instance (GB)
+instance_volume_size: 50
+
+# instance volume type [gp2 | io1 | st1 | sc1]
+instance_volume_type: gp2
+
+# instance volume iops (only applicable to io1)
+# instance_volume_iops: 3000
+
+# subnet visibility [public (instances will have public IPs) | private (instances will not have public IPs)]
+subnet_visibility: public
+
+# NAT gateway (required when using private subnets) [none | single | highly_available (a NAT gateway per availability zone)]
+nat_gateway: none
+
+# API load balancer scheme [internet-facing | internal]
+api_load_balancer_scheme: internet-facing
+
+# operator load balancer scheme [internet-facing | internal]
+# note: if using "internal", you must configure VPC Peering to connect your CLI to your cluster operator
+operator_load_balancer_scheme: internet-facing
+
+# API Gateway [public (API Gateway will be used by default, can be disabled per API) | none (API Gateway will be disabled for all APIs)]
+api_gateway: public
+
+# additional tags to assign to AWS resources (all resources will automatically be tagged with cortex.dev/cluster-name: <cluster_name>)
+#tags:  # <string>: <string> map of key/value pairs
+
+# enable spot instances
+spot: false
+
+# SSL certificate ARN (only necessary when using a custom domain without API Gateway)
+#ssl_certificate_arn:
+
+# primary CIDR block for the cluster's VPC
+#vpc_cidr: 192.168.0.0/16
