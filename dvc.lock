@@ -1,0 +1,14 @@
+train:
+  cmd: python training/src/main.py serving/data/ serving/requirements.txt
+  deps:
+  - path: training/
+    md5: 5ce934f33fb13baa71903d0500801ab7.dir
+    size: 4006
+    nfiles: 2
+  outs:
+  - path: serving/data/metrics.json
+    md5: ea3b3c2a6e04092c0fbc6cf42b7aa963
+    size: 150
+  - path: serving/data/model.joblib.gz
+    md5: 1f2c4d586f09402e3a060f6ef23d8201
+    size: 101250806

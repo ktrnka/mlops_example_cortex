@@ -13,3 +13,6 @@ This repo uses Cortex for deployment to AWS. Cortex makes it easy to handle very
 - Organize the infrastructure code better. Right now there's some in serving and some in infrastructure
 - Update the github actions to work with Cortex
 - Update the makefile
+
+## Stretch goals
+- Try switching to huggingface transformers
