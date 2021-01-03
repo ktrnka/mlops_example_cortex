@@ -18,6 +18,6 @@ This repo uses Cortex for deployment to AWS. Cortex makes it easy to handle very
 ## Stretch goals
 - Try switching to huggingface transformers
 - Figure out memory usage from local docker to help pick the right instances for serving
-- API authentication
+- API authentication: It looks like the best way is to create the API gateway with auth in another way, or use REST with IAM auth
 - Make the cluster nodes private
 - Find a way to limit network access to the operator, for instance IP-based access from the machine that created it
