@@ -6,14 +6,14 @@ This repo is another in my series of MLops examples to show the basics, such as:
 * Hosting the web service
 * Pull request / review concepts, like reviewing a model build, reviewing service changes, and basic testing for the service
 
-This repo uses Cortex for deployment to AWS. Cortex makes it easy to handle very high request throughput and keep costs down. It does that by serving models frmo a Kubernetes cluster and scaling up and down as needed, even supporting spot instances. 
+This repo uses Cortex for deployment to AWS. Cortex makes it easy to handle high request throughput and keep costs down. It does that by serving models from a Kubernetes cluster and scaling up and down as needed. 
 
 # TO DO
-- Switch from Cortex to DVC to access the model file
-- Organize the infrastructure code better. Right now there's some in serving and some in infrastructure
-- Update the github actions to work with Cortex
+- The model file is packaged with the code for deployment and Cortex doesn't like that. We should use the DVC Python module to load on start from S3.
+- Create Github Actions to auto-deploy to Cortex.
 - Figure out how to wait for the deployment to finish to test it. It looks like the `cortex get` output will say "live" when it's ready, but I haven't found a version that waits for it
 - Run a unit test against the predict function
+- Organize the infrastructure code better? Right now there's some in serving and some in infrastructure.
 
 ## Stretch goals
 - Try switching to huggingface transformers
