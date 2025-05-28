@@ -1,3 +1,5 @@
+**Archived: Databricks acquired Cortex Labs in 2022 and the [cortex](https://github.com/cortexlabs/cortex) repo has not been maintained, so I don't recommend trying this for learning**
+
 This repo is another in my series of MLops examples to show the basics, such as:
 * Saving and loading a trained model
 * Versioning models
